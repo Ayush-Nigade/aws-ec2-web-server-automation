@@ -27,66 +27,6 @@ The project also demonstrates secure access using SSH Key Pairs, Security Groups
 
 
 
-## Project Architecture
-
-
-User
-   │
-   ▼
-Internet
-   │
-   ▼
-Security Group
-(SSH 22, HTTP 80, HTTPS 443)
-   │
-   ▼
-EC2 Instance
-Amazon Linux 2023
-t2.micro
-   │
-   ▼
-EC2 User Data Script
-   │
-   ├── Update System
-   ├── Install Apache
-   ├── Start Apache
-   ├── Enable Apache
-   └── Create index.html
-   │
-   ▼
-Apache HTTP Server
-   │
-   ▼
-Custom Website
-
-
-## Project Structure
-
-
-aws-ec2-web-server-automation/
-│
-├── README.md
-├── architecture/
-│   └── architecture-diagram.png
-│
-├── documentation/
-│   └── AWS-EC2-WebServer-Automation.pdf
-│
-├── userdata/
-│   └── install_apache.sh
-│
-└── screenshots/
-    ├── 01-aws-console-home.png
-    ├── 02-keypair-created.png
-    ├── 03-security-group.png
-    ├── 04-launch-instance.png
-    ├── 05-instance-running.png
-    ├── 06-webpage.png
-    ├── 07-httpd-status.png
-    ├── 08-index-html.png
-    ├── 09-cloud-init-output.png
-   
-
 ## Deployment Steps
 
 ### 1. Create an EC2 Key Pair
